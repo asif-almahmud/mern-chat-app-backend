@@ -2,9 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const chats = require("./data/data");
+const connectDB = require("./config/db");
 
 const app = express();
 dotenv.config();
+connectDB();
 
 const corsOptions = {
   origin: ["https://habit-it.chat-app.com", "http://localhost:3000"], //
